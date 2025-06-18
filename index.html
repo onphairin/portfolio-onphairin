@@ -5,39 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio | Onphairin Chandee</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     body {
       font-family: 'Inter', sans-serif;
+      background-color: #e0deb8;
+    }
+
+    header {
+      background: linear-gradient(90deg, #e08fc9 0%, #e7a77f 100%);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    header h1,
+    header p,
+    header nav a {
+      color: rgb(248, 247, 247);
+    }
+
+    header nav a:hover {
+      color: #61badd;
     }
   </style>
 </head>
-<body class="bg-yellow-100 text-gray-800">
+<body>
 
   <!-- Header -->
-  <header class="bg-white shadow sticky top-0 z-50">
+  <header>
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
       <img src="images/Profile Photo.jpg" alt="Profile Photo" class="w-32 h-32 rounded-full shadow-lg border-4 border-white" />
-      <h1 class="text-2xl font-bold text-indigo-600">Onphairin Chandee</h1>
+      <h1 class="text-2xl font-bold">Onphairin Chandee</h1>
+      <p class="text-xl mt-2">UI/UX Designer</p>
       <nav class="space-x-6 text-sm font-medium">
-        <a href="javascript:void(0)" onclick="showSection('about')" class="hover:text-indigo-600 transition">About</a>
-        <a href="javascript:void(0)" onclick="showSection('projects')" class="hover:text-indigo-600 transition">Projects</a>
-        <a href="javascript:void(0)" onclick="showSection('contact')" class="hover:text-indigo-600 transition">Contact</a>
+        <a href="javascript:void(0)" onclick="showSection('about')" class="transition">About</a>
+        <a href="javascript:void(0)" onclick="showSection('projects')" class="transition">Projects</a>
+        <a href="javascript:void(0)" onclick="showSection('contact')" class="transition">Contact</a>
       </nav>
     </div>
   </header>
 
-<!-- Hero -->
-<section class="bg-indigo-300 text-white pt-24 pb-16 text-center relative">
-
-  <!-- Hero Text -->
-    <h2 class="text-5xl font-bold">Hi, I'm Onphairin</h2>
-    <p class="text-xl mt-2">UI/UX Designer</p>
-
-</section>
-
-
-   <!-- About Section -->
+  <!-- About Section -->
   <section id="about" class="py-16 max-w-4xl mx-auto px-6">
     <h3 class="text-3xl font-semibold text-indigo-600 mb-4">About Me</h3>
     <p class="text-gray-700 leading-relaxed">
@@ -46,7 +56,7 @@
       และได้ทำงานในบริษัทชั้นนำในอนาคต
     </p>
 
-     <!-- Skills and Tools -->
+    <!-- Skills and Tools -->
     <div class="mt-12 grid md:grid-cols-2 gap-6">
       <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
         <h4 class="text-xl font-semibold text-indigo-600 mb-3">Languages</h4>
@@ -78,106 +88,84 @@
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="py-16 max-w-6xl mx-auto px-6 hidden">
-    <h3 class="text-3xl font-semibold text-indigo-600 mb-8">Projects</h3>
-    <div class="grid gap-6 md:grid-cols-2">
-      <!-- Project 1 -->
-      <div class="border rounded-lg shadow-sm">
-        <button onclick="toggleDetails('project1')" class="w-full text-left px-4 py-3 font-semibold text-indigo-700 bg-pantone-100 hover:bg-indigo-50">
-          FINKCONVERTER
-        </button>
-        <div id="project1" class="px-4 py-3 hidden bg-indigo-50 rounded-b-lg">
-          <img src="images/FINKCONVERTER.png" alt="FINKCONVERTER" class="w-full max-h-64 object-contain rounded mb-3 mx-auto">
-          <p class="text-sm text-gray-700">
-            เป็นโปรเจคเทียบเงินตราของแต่ละประเทศเพื่ออำนวยความสะดวกสำหรับผู้ที่ต้องการวางแผนเดินทางไปต่างประเทศ<br>
-            <strong>ภาษา:</strong> Java
-          </p>
-        </div>
-      </div>
+<section id="projects" class="py-16 max-w-6xl mx-auto px-6 hidden">
+  <h3 class="text-3xl font-semibold text-indigo-600 mb-8">Projects</h3>
+  <div class="grid gap-6 md:grid-cols-2">
+    <!-- Project 1 -->
+    <div class="border rounded-lg shadow-sm">
+      <a href="finkconverter.html" class="block px-4 py-3 font-semibold text-indigo-700 bg-pink-100 hover-gradient rounded-t-lg">
+        FINKCONVERTER
+      </a>
+    </div>
 
-      <!-- Project 2 -->
-      <div class="border rounded-lg shadow-sm">
-        <button onclick="toggleDetails('project2')" class="w-full text-left px-4 py-3 font-semibold text-indigo-700 bg-pantone-100 hover:bg-indigo-50">
-          Review Cafe
-        </button>
-        <div id="project2" class="px-4 py-3 hidden bg-indigo-50 rounded-b-lg">
-          <img src="images/Review Cafe.png" alt="Review Cafe" class="w-full max-h-64 object-contain rounded mb-3 mx-auto">
-          <p class="text-sm text-gray-700">
-            เป็นเว็บไซต์ที่รวบรวมคาเฟ่ต่างๆในกรุงเทพว่าร้านไหนเด่นในเรื่องเครื่องดื่มหรือบรรยากาศที่เหมาะแก่การนั่งชิลๆในคาเฟ่นั้นๆ พร้อมรีวิวจุดเด่นและพิกัดร้าน<br>
-            <strong>ภาษา:</strong> HTML, CSS, JavaScript, Next.js, Node.js<br>
-            <strong>เครื่องมือ:</strong> XAMPP, Visual Studio Code
-          </p>
-        </div>
-      </div>
+    <!-- Project 2 -->
+    <div class="border rounded-lg shadow-sm">
+      <a href="dental Clinic .html" class="block px-4 py-3 font-semibold text-indigo-700 bg-pink-100 hover-gradient rounded-t-lg">
+        Dental Clinic 
+      </a>
+    </div>
 
-      <!-- Project 3 -->
-      <div class="border rounded-lg shadow-sm">
-        <button onclick="toggleDetails('project3')" class="w-full text-left px-4 py-3 font-semibold text-indigo-700 bg-pantone-100 hover:bg-indigo-50">
-          Bike Rental
-        </button>
-        <div id="project3" class="px-4 py-3 hidden bg-indigo-50 rounded-b-lg">
-          <img src="images/Bike Rental.png" alt="Bike Rental" class="w-full max-h-64 object-contain rounded mb-3 mx-auto">
-          <p class="text-sm text-gray-700">
-            เป็นเว็บไซต์ให้เช่าจักรยานออนไลน์ ใช้ระบบ Blockchain ในการดำเนินการต่างๆ และมีการชำระค่าบริการเป็นเหรียญ Ethereum ที่เชื่อมกับกระเป๋า MeteMask<br>
-            <strong>ภาษา:</strong> HTML, CSS, JavaScript, Solidity<br>
-            <strong>เครื่องมือ:</strong> MetaMask, Remix IDE, Ganache
-          </p>
-        </div>
-      </div>
+    <!-- Project 3 -->
+    <div class="border rounded-lg shadow-sm">
+      <a href="review-cafe.html" class="block px-4 py-3 font-semibold text-indigo-700 bg-pink-100 hover-gradient rounded-t-lg">
+        Review Cafe
+      </a>
+    </div>
 
-      <!-- Project 4 -->
-      <div class="border rounded-lg shadow-sm">
-        <button onclick="toggleDetails('project4')" class="w-full text-left px-4 py-3 font-semibold text-indigo-700 bg-pantone-100 hover:bg-indigo-50">
-          SmartWatering System
-        </button>
-        <div id="project4" class="px-4 py-3 hidden bg-indigo-50 rounded-b-lg">
-          <img src="images/SmartWatering System.png" alt="SmartWatering System" class="w-full max-h-64 object-contain rounded mb-3 mx-auto">
-          <p class="text-sm text-gray-700">
-            เป็นโปรเจคระบบการให้น้ำอัตโนมัติแบบ mini เป็นระบบที่ช่วยในการควบคุมการรดน้ำของต้นไม้ขนาดเล็ก
-            โดยใช้เซ็นเซอร์วัดความชื้นในดินและการควบคุมการเปิด-ปิดของปั๊มน้ำ<br>
-            <strong>ภาษา:</strong> Python<br>
-            <strong>เครื่องมือ:</strong> Arduino IDE
-          </p>
-        </div>
-      </div>
+    <!-- Project 4 -->
+    <div class="border rounded-lg shadow-sm">
+      <a href="bike-rental.html" class="block px-4 py-3 font-semibold text-indigo-700 bg-pink-100 hover-gradient rounded-t-lg">
+        Bike Rental
+      </a>
+    </div>
 
-      <!-- Project 5 -->
-      <div class="border rounded-lg shadow-sm">
-        <button onclick="toggleDetails('project5')" class="w-full text-left px-4 py-3 font-semibold text-indigo-700 bg-pantone-100 hover:bg-indigo-50">
-          AI Model for Gemstone
-        </button>
-        <div id="project5" class="px-4 py-3 hidden bg-indigo-50 rounded-b-lg">
-          <img src="images/AI Model for Gemstone.jpg" alt="AI Model for Gemstone" class="w-full max-h-64 object-contain rounded mb-3 mx-auto">
-          <p class="text-sm text-gray-700">
-            เป็นโปรเจคที่สร้าง Model AI เพื่อช่วยในการวิเคราะห์และจำแนกประเภทของอัญมณี
-            โดยใช้ข้อมูลภาพและคุณสมบัติของอัญมณีต่างๆ<br>
-            <strong>ภาษา:</strong> Python, OpenCV, TensorFlow, Keras, HTML, CSS<br>
-            <strong>เครื่องมือ:</strong> Google Colab, Jupyter Notebook
-          </p>
-        </div>
-      </div>
+    <!-- Project 5 -->
+    <div class="border rounded-lg shadow-sm">
+      <a href="smartwatering-system.html" class="block px-4 py-3 font-semibold text-indigo-700 bg-pink-100 hover-gradient rounded-t-lg">
+        SmartWatering System
+      </a>
+    </div>
 
-      <!-- Project 6 -->
-      <div class="border rounded-lg shadow-sm">
-        <button onclick="toggleDetails('project6')" class="w-full text-left px-4 py-3 font-semibold text-indigo-700 bg-pantone-100 hover:bg-indigo-50">
-          Mathes App
-        </button>
-        <div id="project6" class="px-4 py-3 hidden bg-indigo-50 rounded-b-lg">
-          <img src="images/Mathes App.png" alt="Mathes App" class="w-full max-h-64 object-contain rounded mb-3 mx-auto">
-          <p class="text-sm text-gray-700">
-            เป็นแอปพลิเคชันที่รวบรวมรีวิวสินค้าต่างๆ ผู้ใช้สามารถโพสต์รีวิวสินค้าได้ และสามารถดูรีวิวจากผู้ใช้อื่นๆ ได้
-            แอปนี้ช่วยให้ผู้ใช้สามารถตัดสินใจซื้อสินค้าต่างๆ ได้ง่ายขึ้น<br>
-            <strong>ภาษา:</strong> Dart<br>
-            <strong>เครื่องมือ:</strong> Flutter, Dart
-          </p>
-        </div>
-      </div>
+    <!-- Project 6 -->
+    <div class="border rounded-lg shadow-sm">
+      <a href="ai-gemstone.html" class="block px-4 py-3 font-semibold text-indigo-700 bg-pink-100 hover-gradient rounded-t-lg">
+        AI Model for Gemstone
+      </a>
+    </div>
+
+    <!-- Project 7 -->
+    <div class="border rounded-lg shadow-sm">
+      <a href="mathes-app.html" class="block px-4 py-3 font-semibold text-indigo-700 bg-pink-100 hover-gradient rounded-t-lg">
+        Mathes App
+      </a>
+    </div>
+
+    <!-- Project 8 -->
+    <div class="border rounded-lg shadow-sm">
+      <a href="ai-aim.html" class="block px-4 py-3 font-semibold text-indigo-700 bg-pink-100 hover-gradient rounded-t-lg">
+        AI AIM
+      </a>
+    </div>
+
+    <!-- Project 9 -->
+    <div class="border rounded-lg shadow-sm">
+      <a href="Delivery-Package Shop System.html" class="block px-4 py-3 font-semibold text-indigo-700 bg-pink-100 hover-gradient rounded-t-lg">
+        Delivery Package Shop System
+      </a>
     </div>
   </div>
 </section>
 
+<!-- Gradient Hover Style -->
+<style>
+  .hover-gradient:hover {
+    background-image: linear-gradient(135deg, #ffe0f0, #e0d9ff); /* ไล่สีชมพูอ่อนไปม่วงพาสเทล */
+    transition: background 0.3s ease;
+  }
+</style>
 
-   <!-- Contact Section -->
+
+  <!-- Contact Section -->
   <section id="contact" class="py-16 max-w-4xl mx-auto px-6 hidden">
     <h3 class="text-3xl font-semibold text-indigo-600 mb-4">Contact</h3>
     <div class="space-y-2 text-gray-700">
@@ -201,18 +189,23 @@
         document.getElementById(id).classList.add('hidden');
       });
       document.getElementById(sectionId).classList.remove('hidden');
-    }
 
-    function toggleDetails(id) {
-      const section = document.getElementById(id);
-      section.classList.toggle('hidden');
+      // ล็อกการ scroll แค่หน้า About
+      if (sectionId === 'about') {
+        document.body.style.overflow = 'hidden';
+        document.body.style.height = '100vh';
+      } else {
+        document.body.style.overflow = 'auto';
+        document.body.style.height = 'auto';
+      }
     }
 
     window.onload = function () {
-      showSection('about');
+      const params = new URLSearchParams(window.location.search);
+      const section = params.get('section') || 'about';
+      showSection(section);
     };
   </script>
 
 </body>
 </html>
-

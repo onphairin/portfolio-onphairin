@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="AI Model for analyzing and classifying gemstones using image and property data." />
+  <title>AI Model for Gemstone Project</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-b from-yellow-100 via-yellow-50 to-yellow-100 min-h-screen text-gray-800 px-6 py-12 flex flex-col items-center">
+
+  <!-- ปุ่มย้อนกลับ -->
+  <a href="index.html?section=projects" 
+     class="self-start text-indigo-600 hover:text-indigo-800 transition mb-6 inline-flex items-center">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" 
+         stroke-width="2" stroke="currentColor" class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+    </svg>
+  </a>
+
+  <!-- หัวข้อ -->
+  <h1 class="text-4xl sm:text-5xl font-extrabold text-indigo-700 text-center drop-shadow-md">
+    AI Model for Gemstone
+  </h1>
+
+  <!-- ภาพหลัก -->
+  <img src="images/AI Model for Gemstone.jpg" 
+       alt="AI Model for Gemstone" 
+       class="w-full max-w-md my-8 rounded-3xl shadow-xl mx-auto border-4 border-indigo-300 transition-transform hover:scale-105 duration-300" />
+
+  <!-- คำอธิบาย -->
+  <p class="text-gray-700 text-lg max-w-4xl mx-auto text-center leading-relaxed tracking-wide px-4 sm:px-0">
+    เป็นโปรเจกต์ที่สร้างโมเดล AI เพื่อช่วยในการวิเคราะห์และจำแนกประเภทของอัญมณี
+    โดยใช้ข้อมูลจากรูปภาพสีและคุณสมบัติของอัญมณีต่างๆ
+  </p>
+
+  <!-- ภาษา/เครื่องมือ -->
+  <div class="mt-12 text-center text-lg space-y-3 bg-indigo-50/70 max-w-xl rounded-xl p-6 shadow-lg border border-indigo-200">
+    <p><strong class="text-indigo-700">ภาษา:</strong> Python, OpenCV, TensorFlow, Keras, HTML, CSS</p>
+    <p><strong class="text-indigo-700">เครื่องมือ:</strong> Google Colab, Jupyter Notebook, TensorFlow, Keras, OpenCV</p>
+  </div>
+
+  <!-- ส่วนแสดงภาพ 2 คอลัมน์ -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mt-14">
+    <div class="bg-white rounded-2xl shadow-md p-4 border border-indigo-200">
+      <p class="text-center font-semibold text-gray-700 mb-2">กระบวนการเทรนโมเดล AI ด้วยข้อมูลรูปภาพ</p>
+      <img src="images/AI Model1.png" alt="AI Training Process" class="rounded-lg shadow w-full" />
+    </div>
+    <div class="bg-white rounded-2xl shadow-md p-4 border border-indigo-200">
+      <p class="text-center font-semibold text-gray-700 mb-2">โครงสร้างของโมเดลที่ใช้ในการจำแนกประเภท</p>
+      <img src="images/AI Model2.png" alt="Model Architecture" class="rounded-lg shadow w-full" />
+    </div>
+    <div class="md:col-span-2 bg-white rounded-2xl shadow-md p-4 border border-indigo-200">
+      <p class="text-center font-semibold text-gray-700 mb-2">ผลลัพธ์การพยากรณ์ประเภทของอัญมณีจากโมเดล</p>
+      <img src="images/AI Model3.png" alt="Prediction Result" class="rounded-lg shadow w-full" />
+    </div>
+  </div>
+
+</body>
+</html>
